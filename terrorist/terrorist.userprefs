@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets\player.cs" Line="4" Column="38" />
       <File FileName="Assets\destroy.cs" Line="6" Column="23" />
-      <File FileName="Assets\spawner.cs" Line="40" Column="71" />
+      <File FileName="Assets\spawner.cs" Line="49" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
