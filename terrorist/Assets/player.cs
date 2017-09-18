@@ -19,14 +19,15 @@ public class player : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.tag == "tir") {
 			ded ();
-			Debug.Log ("ooo!!!");
 		}
 	}
 	void ded(){
+		anim.enabled = false;
 		for (int i = 0; i < 10; i++) {
-			anim.enabled = false;
-			_rb[i].mass = 0.1f;
-			_rb [i].isKinematic = false;
+			if (_rb [i] != null) {
+				_rb [i].mass = 0.1f;
+				_rb [i].isKinematic = false;
+			} 
 		}
 	}
 }

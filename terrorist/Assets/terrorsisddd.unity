@@ -101,8 +101,9 @@ GameObject:
   - 212: {fileID: 489967713}
   - 61: {fileID: 489967711}
   - 50: {fileID: 489967710}
-  - 61: {fileID: 489967715}
   - 114: {fileID: 489967712}
+  - 61: {fileID: 489967716}
+  - 61: {fileID: 489967715}
   m_Layer: 0
   m_Name: TIR
   m_TagString: tir
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 489967709}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -138,9 +139,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.21792221}
+  m_Offset: {x: 0, y: 0.28876948}
   serializedVersion: 2
-  m_Size: {x: 7.39, y: 2.4341555}
+  m_Size: {x: 7.39, y: 2.292461}
 --- !u!114 &489967712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,8 +153,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b06a1b885ce82c845a9b71483c39a556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guy: {fileID: 1000011172173890, guid: 1c236a0de983a9b42a5f673980da7e01, type: 2}
+  droga: {fileID: 1000012582567906, guid: 6d4b7660ab4e0374e8637f5c6f4d19ec, type: 2}
+  droga2: {fileID: 1000010323698872, guid: 534625cfa6fe62742b7e3ded6ed7e0d8, type: 2}
+  current: {fileID: 0}
   spawn: {fileID: 756866426}
-  guy: {fileID: 1000012562734114, guid: 1c236a0de983a9b42a5f673980da7e01, type: 2}
+  destroyer: {fileID: 1245801883}
+  kierowca: {fileID: 560779370}
+  cam: {fileID: 1089348683}
+  time: 1.2
+  size: 7
 --- !u!212 &489967713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -198,12 +207,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 560779370}
   - {fileID: 1089348683}
-  - {fileID: 756866426}
-  - {fileID: 1245801883}
+  - {fileID: 560779370}
   m_Father: {fileID: 699368597}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!61 &489967715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -213,11 +220,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -12.392599, y: 0.38497162}
+  m_Offset: {x: 3.442373, y: -1.0912676}
   serializedVersion: 2
-  m_Size: {x: 2.2922812, y: 15.427544}
+  m_Size: {x: 0.39878893, y: 0.5100241}
+--- !u!61 &489967716
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489967709}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 1.4638956, y: -1.1090112}
+  serializedVersion: 2
+  m_Size: {x: 1.7296028, y: 0.40355873}
 --- !u!1 &560779369
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +267,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 489967714}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!212 &560779371
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -294,7 +315,7 @@ GameObject:
   - 235: {fileID: 666761414}
   m_Layer: 0
   m_Name: "ko\u0142o (1)"
-  m_TagString: Untagged
+  m_TagString: tir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,12 +327,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 666761412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.276, y: -0.1625, z: -0.00390625}
+  m_LocalPosition: {x: -5.2623, y: -0.1625, z: -0.00390625}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 699368597}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!235 &666761414
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -326,10 +347,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -2.9500735, y: -1.2273247}
+  m_ConnectedAnchor: {x: -2.9452825, y: -1.2358421}
   m_Suspension:
-    m_DampingRatio: 0
-    m_Frequency: 14
+    m_DampingRatio: 0.3
+    m_Frequency: 9.5
     m_Angle: 0
   m_UseMotor: 1
   m_Motor:
@@ -343,7 +364,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 666761412}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -425,14 +446,16 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1245801883}
   - {fileID: 489967714}
   - {fileID: 1411103324}
   - {fileID: 666761413}
   - {fileID: 1169342598}
   - {fileID: 1959379897}
   - {fileID: 1970529568}
+  - {fileID: 756866426}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &756866425
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,94 +477,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756866425}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.81, y: -0.13, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.484074, y: -0.87, z: -0.00390625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 489967714}
-  m_RootOrder: 2
---- !u!1 &1078342714
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1078342718}
-  - 33: {fileID: 1078342717}
-  - 23: {fileID: 1078342716}
-  - 61: {fileID: 1078342715}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &1078342715
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1078342714}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!23 &1078342716
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1078342714}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1078342717
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1078342714}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1078342718
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1078342714}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.36, z: 0}
-  m_LocalScale: {x: 10000, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 699368597}
+  m_RootOrder: 7
 --- !u!1 &1089348678
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,12 +565,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1089348678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.21, z: -10}
+  m_LocalPosition: {x: 0, y: 0.21000004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 489967714}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1169342597
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +585,7 @@ GameObject:
   - 235: {fileID: 1169342599}
   m_Layer: 0
   m_Name: "ko\u0142o (2)"
-  m_TagString: Untagged
+  m_TagString: tir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,12 +597,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169342597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4, y: -0.168, z: -0.00390625}
+  m_LocalPosition: {x: -2.4, y: -0.1612, z: -0.00390625}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 699368597}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!235 &1169342599
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -675,10 +617,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.07407355, y: -1.2318246}
+  m_ConnectedAnchor: {x: -0.08055522, y: -1.2340791}
   m_Suspension:
-    m_DampingRatio: 0
-    m_Frequency: 14
+    m_DampingRatio: 0.3
+    m_Frequency: 9.5
     m_Angle: 0
   m_UseMotor: 1
   m_Motor:
@@ -692,7 +634,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169342597}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -771,13 +713,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1245801882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.3259265, y: 1.0648247, z: -0.00390625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 489967714}
-  m_RootOrder: 3
+  m_Father: {fileID: 699368597}
+  m_RootOrder: 0
 --- !u!114 &1245801884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,9 +742,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.6324444, y: 1.9788245}
+  m_Offset: {x: -22.176886, y: 2.8377085}
   serializedVersion: 2
-  m_Size: {x: 26.364109, y: 14.268002}
+  m_Size: {x: 1.4334908, y: 28.210535}
 --- !u!1 &1411103323
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +759,7 @@ GameObject:
   - 235: {fileID: 1411103326}
   m_Layer: 0
   m_Name: "ko\u0142o"
-  m_TagString: Untagged
+  m_TagString: tir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -829,12 +771,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1411103323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4605, y: -0.167, z: -0.00390625}
+  m_LocalPosition: {x: 0.4657, y: -0.2175, z: -0.00390625}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 699368597}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!212 &1411103325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -882,10 +824,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.78, y: -1.23}
+  m_ConnectedAnchor: {x: 2.7916265, y: -1.2823247}
   m_Suspension:
-    m_DampingRatio: 0.7
-    m_Frequency: 4
+    m_DampingRatio: 0.3
+    m_Frequency: 9.5
     m_Angle: 0
   m_UseMotor: 1
   m_Motor:
@@ -899,7 +841,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1411103323}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -936,7 +878,7 @@ GameObject:
   - 235: {fileID: 1959379898}
   m_Layer: 0
   m_Name: "ko\u0142o (3)"
-  m_TagString: Untagged
+  m_TagString: tir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -948,12 +890,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1959379896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.904, y: -0.16799998, z: -0.00390625}
+  m_LocalPosition: {x: -3.904, y: -0.164, z: -0.00390625}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 699368597}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!235 &1959379898
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -968,10 +910,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.5780735, y: -1.2328247}
+  m_ConnectedAnchor: {x: -1.5852356, y: -1.2299068}
   m_Suspension:
-    m_DampingRatio: 0
-    m_Frequency: 14
+    m_DampingRatio: 0.3
+    m_Frequency: 9.5
     m_Angle: 0
   m_UseMotor: 1
   m_Motor:
@@ -985,7 +927,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1959379896}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1055,7 +997,7 @@ GameObject:
   - 235: {fileID: 1970529569}
   m_Layer: 0
   m_Name: "ko\u0142o (4)"
-  m_TagString: Untagged
+  m_TagString: tir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1067,12 +1009,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1970529567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.564, y: -0.16799998, z: -0.00390625}
+  m_LocalPosition: {x: -4.564, y: -0.169, z: -0.00390625}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 699368597}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!235 &1970529569
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -1087,10 +1029,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -2.2380736, y: -1.2328247}
+  m_ConnectedAnchor: {x: -2.2467523, y: -1.2388663}
   m_Suspension:
-    m_DampingRatio: 0.7
-    m_Frequency: 14
+    m_DampingRatio: 0.3
+    m_Frequency: 9.5
     m_Angle: 0
   m_UseMotor: 1
   m_Motor:

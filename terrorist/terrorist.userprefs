@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="terrorist.CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\spawner.cs">
     <Files>
       <File FileName="Assets\player.cs" Line="4" Column="38" />
+      <File FileName="Assets\destroy.cs" Line="6" Column="23" />
+      <File FileName="Assets\spawner.cs" Line="40" Column="71" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
